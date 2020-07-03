@@ -1,1 +1,22 @@
-<h1>hello world!</h1>
+<form [formGroup]="group" (ngSubmit)="submit()">
+  <label>
+    Email:<br>
+    <input type="email" formControlName="email">
+  </label>
+  <p *ngIf="group.get('email')?.hasError('required') &&
+            group.get('email')?.touched">
+    This field is required
+  </p>
+
+  <label>
+    Password:<br>
+    <input type="password" formControlName="password">
+  </label>
+
+  <p *ngIf="group.get('password')?.hasError('required') &&
+            group.get('password')?.touched">
+    This field is required
+  </p>
+
+  <button type="submit">Submit</button>
+</form>
