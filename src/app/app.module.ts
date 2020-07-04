@@ -6,15 +6,9 @@ import { AppComponent } from './app.component';
 import { MarkFormTouchedDirective } from './mark-form-touched.directive';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MarkFormTouchedDirective
-  ],
-  imports: [
-    BrowserModule,
-    ReactiveFormsModule
-  ],
+  declarations: [AppComponent, MarkFormTouchedDirective],
+  imports: [BrowserModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

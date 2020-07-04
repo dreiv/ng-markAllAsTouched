@@ -10,7 +10,5 @@ export class MarkFormTouchedDirective {
     this.container?.control?.markAllAsTouched();
   }
 
-  constructor(@Self() private container: ControlContainer) {
-  }
-
+  constructor(@Self() private container: ControlContainer) {}
 }
